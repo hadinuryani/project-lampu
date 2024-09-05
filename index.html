@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+  <title>Documeent</title>
+</head>
+
+<body>
+  <div class="container ">
+    <nav>
+      <h1>SKEMA LAMPU DALAM RUMAH <span style="color:red">HADI</span></h1>
+    </nav>
+    <div>
+      <div class="lampu-tamu" >
+        <img src="asets/image/off.gif"id="lampTamu1" />
+        <img src="asets/image/off.gif"id="lampTamu2" />
+        <img src="asets/image/off.gif"id="lampTamu3" />
+      </div>
+      <h2>Ruang Tamu</h2>
+    </div>
+    <div>
+      <div class="lampu-keluarga" >
+        <img src="asets/image/off.gif" id="lampKeluarga1"/>
+        <img src="asets/image/off.gif" id="lampKeluarga2"/>
+        <img src="asets/image/off.gif" id="lampKeluarga3"/>
+      </div>
+      <h2>Ruang Keluarga</h2>
+    </div>
+    <div>
+      <div class="lampu-makan" >
+        <img src="asets/image/off.gif" id="lampMakan1"/>
+        <img src="asets/image/off.gif" id="lampMakan2"/>
+      </div>
+      <h2>Ruang Makan</h2>
+    </div>
+    <div>
+      <div class="lampu-tidur" >
+        <img src="asets/image/off.gif" id="lampTidur1"/>
+        <img src="asets/image/off.gif" id="lampTidur2"/>
+      </div>
+      <h2>Ruang Tidur</h2>
+    </div>
+    <div class="saklar">
+      <label class="inline-flex items-center cursor-pointer">
+        <input type="checkbox" value=""  id="all" class="sr-only peer" onchange="saklar()">
+        <div
+          class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+        </div>
+        <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">All</span>
+      </label>
+
+      <label class="inline-flex items-center cursor-pointer">
+        <input type="checkbox" value="" id="toggleTamu" class="sr-only peer" onchange="saklar()">
+        <div
+          class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+        </div>
+        <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Tamu</span>
+      </label>
+
+      <label class="inline-flex items-center cursor-pointer">
+        <input type="checkbox" value=""  id="toggleKeluarga" class="sr-only peer" onchange="saklar()">
+        <div
+          class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+        </div>
+        <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Keluarga</span>
+      </label>
+
+      <label class="inline-flex items-center cursor-pointer">
+        <input type="checkbox" value=""  id="toggleMakan" class="sr-only peer" onchange="saklar()">
+        <div
+          class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+        </div>
+        <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Makan</span>
+      </label>
+
+      <label class="inline-flex items-center cursor-pointer">
+        <input type="checkbox" value=""  id="toggleTidur" class="sr-only peer" onchange="saklar()">
+        <div
+          class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+        </div>
+        <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Tidur</span>
+      </label>
+
+
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  <script src="saklar.js" type="application/javascript" ></script>
+</body>
+
+</html>
